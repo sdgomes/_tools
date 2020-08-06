@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Show Sizes</title>
+
+    <body>
+
+        <h2>Shows Devices and Screens of Sizes</h2>
+        <br>
+        <h3 id="screenWidth"></h3>
+        <h3 id="screenHeight"></h3>
+
+        <br>
+        <h3 id="windowWidth"></h3>
+        <h3 id="windowHeight"></h3>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script>
+            $('document').ready(function() {
+                document.getElementById('screenWidth').innerHTML = "Largura do dispositivo: " + screen.width
+                document.getElementById('screenHeight').innerHTML = "Altura do dispositivo: " + screen.height
+
+                $('#windowWidth').html('Largura do navegador: ' + $(window).width())
+                $('#windowHeight').html('Altura do navegador: ' + $(window).height())
+            });
+        </script>
+    </body>
+
+</html>
